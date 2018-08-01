@@ -11,12 +11,12 @@
 			
 			$sql = "INSERT INTO users (user_first, user_last, user_email, user_uid, user_pwd) VALUES('$first_name', '$last_name', '$mail', '$id', '$password');";
 			mysqli_query($conn, $sql);
-			echo ('Success'); 
+			$result = 'Success'; 
 		} else {
-			echo ('One or more fields are empty');
+			$result = 'One or more fields are empty';
 		}
 	}  else {
-		echo ('Error');
+		$result = 'Error';
 	}
 ?>
 <!DOCTYPE html>
@@ -24,16 +24,30 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Insert data</title>
+	  <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+
+    
+
 </head>
 <body>
-	<form action="insert-data.php" method="POST">
-		First Name: <input type="text" name="first"><br><br>
-		Last Name: <input type="text" name="last"><br><br>
-		Email: <input type="email" name="mail"><br><br>
-		User ID: <input type="text" name="id"><br><br>
-		Password: <input type="password" name="password"><br><br><br>
-		<input type="submit" name="submit">
-	</form>
-	
+	<div class="container">
+		<form action="insert-data.php" method="POST">
+			First Name: <input type="text" name="first"><br><br>
+			Last Name: <input type="text" name="last"><br><br>
+			Email: <input type="email" name="mail"><br><br>
+			User ID: <input type="text" name="id"><br><br>
+			Password: <input type="password" name="password"><br><br><br>
+			<input type="submit" name="submit">
+		</form>
+		<div class="card-panel #80d8ff light-blue accent-1">
+		    <span class="blue-text text-darken-2"><?php echo $result; ?></span>
+		  </div>
+	</div>
+
+
+		<!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+	</div>
 </body>
 </html>
