@@ -22,7 +22,7 @@
 			echo "0 result";
 		} 
 	?>
-	<?php  
+	<?php 
 
 		mysqli_close($conn);
 	?>

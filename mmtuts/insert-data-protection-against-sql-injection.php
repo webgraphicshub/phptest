@@ -2,11 +2,11 @@
 	include_once('includes/database.php');
 	$class_val = 0;
 	if (isset($_POST['first']) && isset($_POST['last']) && isset($_POST['mail'])&& isset($_POST['id'])&& isset($_POST['password'])&& isset($_POST['submit'])){
-		$first_name = $_POST['first'];
-		$last_name = $_POST['last'];
-		$mail = $_POST['mail'];
-		$id = $_POST['id'];
-		$password = $_POST['password'];
+		$first_name = mysqli_real_escape_string($conn, $_POST['first']);
+		$last_name = mysqli_real_escape_string($conn, $_POST['last']);
+		$mail = mysqli_real_escape_string($conn, $_POST['mail']);
+		$id = mysqli_real_escape_string($conn, $_POST['id']);
+		$password = mysqli_real_escape_string($conn, $_POST['password']);
 
 		if (!empty($first_name) && !empty($last_name) && !empty($mail) && !empty($id) && !empty($password)){
 			
@@ -26,7 +26,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Insert data</title>
+	<title>Insert data No SQL Injection</title>
 	  <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
 
