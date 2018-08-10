@@ -1,0 +1,5 @@
+a { text-decoration: none; color: #000; background: #DB86D2; }
+.date { font-family: sans-serif; text-transform: uppercase; color: #FF9800; }
+.author { font-family: sans-serif; text-transform: capitalize; color: #63B72B; }
+.article-container { width: 700px; max-width: 100%; margin: 0 auto; }
+.title { font-family: sans-serif; font-size: 40px; text-transform: uppercase; }
