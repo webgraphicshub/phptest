@@ -9,7 +9,7 @@
 		$string = "My Name is Amarta, Amarta is my name";
 
 
-	$stringto = preg_replace("/Amarta/", "Rahul", $string);
+	$stringto = preg_match("//", $string);
 
 	echo $stringto;
 	 ?>
